@@ -10,7 +10,7 @@ export default class Button extends Component {
     view() {
         console.log('redrawing. count: ' + this.count);
 
-        return <div onclick="{this.inc.bind(this)}">{this.count}</div>;
+        return m('button', { onclick: this.inc.bind(this) }, this.count);
     }
 
     inc() {

@@ -153,8 +153,8 @@ function (_Component) {
 
   _proto.view = function view() {
     console.log('redrawing. count: ' + this.count);
-    return m("div", {
-      onclick: "{this.inc.bind(this)}"
+    return m('button', {
+      onclick: this.inc.bind(this)
     }, this.count);
   };
 
